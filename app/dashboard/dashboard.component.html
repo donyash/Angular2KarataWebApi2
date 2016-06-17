@@ -1,0 +1,38 @@
+﻿  <div id="alert-div" class="panel-body">
+        <div id="alert" *ngIf='isLoggedIn' class="text-center alert alert-success" role="alert">
+            <button id="alert-button" type="button" class="close" aria-label="Close" (click)="close()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            Thanks for logging in!
+        </div>
+        <div id="alert" *ngIf='!isLoggedIn' class="text-center alert alert-info" role="alert">
+            <button id="alert-button" type="button" class="close" aria-label="Close" (click)="close()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            Please log in.
+        </div>
+  </div>
+             
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        {{pageTitle}}
+    </div>
+    <div class="panel-body"  >
+        <div class="row"  >
+            <div *ngIf='isLoggedIn' class="text-center">You are logged in.</div>
+            <h3 class="text-center">{{loggedInUser}}</h3>                      
+            <div class="text-center">
+               <div *ngIf='isLoggedIn'>Howdy folks!
+                   <div>
+                    <button *ngIf='isLoggedIn' type="submit" class="btn btn-default" (click)="logOut()" >Logout</button>
+                   </div>
+               </div>
+               <div> 
+                  <button *ngIf='!isLoggedIn' type="submit" class="btn btn-default" (click)="logIn()">Login</button>
+                   <!--<a [routerLink]="['Login']">login</a>-->
+               </div>
+            </div>
+        </div>
+    </div>
+</div>

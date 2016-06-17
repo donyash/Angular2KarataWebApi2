@@ -1,0 +1,33 @@
+  <div class="panel panel-primary">
+        <div class="panel-heading">
+            {{pageTitle}}
+        </div>
+        
+        <div class="panel-body"  >
+        
+        
+            <div class="row"  >
+            
+                <div class="col-xs-6 col-sm3" *ngIf="!showLoading">
+                
+                <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+                    {{errorMessage}}
+                </div>
+                 <login-form></login-form>
+                </div>
+                
+                <div class="col-xs-6 col-sm3" *ngIf="showLoading">
+                    Loading...
+                </div>
+                <div>
+                    <p>
+                    This message is different from other text. Bacon ipsum dolor amet. Bacon ipsum dolor amet. Bacon ipsum dolor amet. Bacon ipsum dolor amet.
+                    </p>
+                    <p>
+                    This message is different from other text. Drumstick kevin pastrami tri-tip meatloaf jowl. 
+                    </p>
+                </div>
+          </div>
+   
+   
+    </div>
